@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login moderno</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form signup" action="signup.php" method="post" novalidate>
+        <h2>Cadastrar-se em nosso sistema</h2>
+        <div class="inputBox">
+          <input type="text" name="username" required="required" />
+          <i class="fa-regular fa-user"></i>
+          <span>nome de usuário</span>
+        </div>
+        <div class="inputBox">
+          <input type="email" name="email" required="required" />
+          <i class="fa-regular fa-envelope"></i>
+          <span>endereço de e-mail</span>
+        </div>
+        <div class="inputBox">
+          <input
+            type="password"
+            name="password"
+            required="required"
+            minlength="8"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{8,}"
+            title="A senha deve ter pelo menos 8 caracteres, incluindo letra maiúscula, letra minúscula, número e símbolo."
+          />
+          <i class="fa-solid fa-lock"></i>
+          <span>criar senha</span>
+        </div>
+        <div class="inputBox">
+          <input type="password" name="password_confirm" required="required" />
+          <i class="fa-solid fa-lock"></i>
+          <span>confirmar senha</span>
+        </div>
+        <div class="inputBox">
+          <input type="submit" value="Criar conta" />
+        </div>
+        <small class="password-help"
+          >A senha deve ter pelo menos 8 caracteres, com letra maiúscula,
+          minúscula, número e símbolo.</small
+        >
+        <p>Já é membro? <a href="#" class="login">Entrar</a></p>
+      </form>
+
+      <form class="form signin" action="#" method="post" novalidate>
+        <h2>Entrar</h2>
+        <div class="inputBox">
+          <input type="text" name="login_username" required="required" />
+          <i class="fa-regular fa-user"></i>
+          <span>nome de usuário</span>
+        </div>
+        <div class="inputBox">
+          <input type="password" name="login_password" required="required" />
+          <i class="fa-solid fa-lock"></i>
+          <span>senha</span>
+        </div>
+        <div class="inputBox">
+          <input type="submit" value="Entrar" />
+        </div>
+        <p>Não é registrado? <a href="#" class="create">Criar uma conta</a></p>
+      </form>
+    </div>
+
+    <script>
+      let login = document.querySelector(".login");
+      let create = document.querySelector(".create");
+      let container = document.querySelector(".container");
+
+      if (login && create && container) {
+        login.onclick = function () {
+          container.classList.add("signinForm");
+        };
+
+        create.onclick = function () {
+          container.classList.remove("signinForm");
+        };
+      }
+    </script>
+  </body>
+</html>
