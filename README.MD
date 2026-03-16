@@ -28,7 +28,6 @@ No cadastro, a senha precisa atender a alguns requisitos de segurança, e o PHP 
 
 - HTML5
 - CSS3
-- JavaScript
 - PHP 
 - Font Awesome
 
