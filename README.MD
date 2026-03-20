@@ -1,4 +1,6 @@
-# Login Moderno com Validação de Senha em PHP
+# Login Moderno com Validação de Senha em PHP 
+
+## Projeto desenvolvido para obter conhecimento e noções HTML, CSS e PHP em cadastro. Juntamente com noções de design..
 
 Interface de login e cadastro moderna, com animações suaves e validação de senha tanto no navegador quanto no servidor usando PHP.
 
